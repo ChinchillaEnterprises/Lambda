@@ -43,8 +43,7 @@ exports.handler = async (event, context) => {
 
       if (logGroup.includes('aws-glue') == true) {
 
-
-        if (logEvent.message.includes('Running Start Crawl') == false && logEvent.message.includes('authenticom') == false && logEvent.message.includes('Crawler has finished running') == false) {
+        if (logEvent.message.includes('Running Start Crawl') == false && logEvent.message.includes('authenticom') == false && logEvent.message.includes('Crawler has finished running') == false && logEvent.message.includes('*INFO*') == false) {
 
           continue
         }
